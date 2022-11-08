@@ -1,0 +1,45 @@
+/*Para visualizar los resutados se debera ir a página de ejecución,
+  dar clic derecho en cualquier área de la pantalla y en el menú alterno 
+  seleccionar la opción Inspeccionar, activar la Emulacion de Dispositivo ( Ctrl + Shift + M )
+  e ir deslizando la barra para ampliar o disminuir la vista de la página. 
+  
+  Para este ejemplo, si la visualizacion de la pantala disminuye a 500px, el 
+  formato del texto se cambiará según lo especificado en la class @media; es decir, 
+  el título cambiará a color rojo y el párrafo a color purpura.
+  Pero si aumentamos la visualizacion a partir de 900px, se reflejaran los cambios 
+  definidos en su class, es decir, el titulo se pondra azul y el párrafo a color verde. */
+
+.titulo{
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.parrafo{
+    text-align: center;
+}
+
+/*mínimo de pixeles puede ser hasta 400px*/
+@media(max-width: 500px){
+    .titulo{
+        text-align: left;
+        color: red;
+    }
+   
+    .parrafo{
+        text-align: center;
+        color: purple;
+    }
+}
+ 
+/*maximo de pixeles puede ser hasta 1400px*/
+@media(min-width: 900px){
+    .titulo{
+        text-align: left;
+        color: blue;
+    }
+   
+    .parrafo{
+        text-align: center;
+        color: green;
+    }
+}
